@@ -5,7 +5,7 @@ if (document.readyState !== 'loading') {
 }
 
 function ready () {
-    getBlogposts('/posts');
+    getBlogposts('/get-posts');
 
     // send posts to server
     var form = document.querySelector('form');
@@ -33,7 +33,6 @@ function postBlogposts (url, data) {
                 console.log(json);
                 addBlogpostsToPage(json);
                 document.querySelector('form').reset();
-                window.location.href = "http://localhost:5000";
         })
     })
     .catch(function (err) {
@@ -45,7 +44,7 @@ function getBlogposts (url) {
     fetch(url, {
         method: 'GET'
     })
-    .then(function(res) {
+    .then(function (res) {
         res.json()
         .then(function (json) {
             console.log(json);
@@ -58,8 +57,8 @@ function getBlogposts (url) {
 }
 
 function addBlogpostsToPage (data) {
-    JSON.parse(data).map(post => {  
-        if (post.hasOwnProperty("blogpost")) {
+    for (var blogpost in data) {
+        if (data.hasOwnProperty(blogpost)) {
 
             var postDiv         = document.createElement('div');
             var postText        = document.createElement('p');
@@ -68,12 +67,12 @@ function addBlogpostsToPage (data) {
 
             thumbnail.src = "./img/logo2.png";
             thumbnail.className = "thumbnail";
-            postText.innerHTML = post.blogpost;
+            postText.innerHTML = data[blogpost];
             postDiv.className = "post";
 
             postDiv.appendChild(thumbnail);
             postDiv.appendChild(postText);
             postContainer.appendChild(postDiv);
         }
-    });
+    }
 }

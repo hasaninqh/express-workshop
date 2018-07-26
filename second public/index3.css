@@ -1,0 +1,279 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+html {
+    font-family: "Lucida Sans", sans-serif;
+    color: #ffffff;
+     background-color: #141414;
+}
+#header {
+    background-color: #1b1a1a;
+    color: #ffffff;
+    padding: 15px;
+   text-align: center;
+}
+#header h1{
+  color: #ffffff;
+  text-shadow: 3px 2px #530303;
+}
+
+#header h3{
+  color: #530303;
+}
+.col-6 section{
+   text-align: center;
+}
+
+.col-6 .title{
+ text-align: center; 
+}
+
+
+.img-container{
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+.img-container #pic{
+  max-width: 100%;
+  display: block;
+}
+.img-container span{
+  display: block;
+  width: 100%;
+  font-size: 0.5rem;
+ font-style: italic;
+}
+.info{
+  margin: 1rem;
+  text-align: justify;
+  display: block;
+}
+.title{
+  text-transform: capitalize;
+}
+.row ul{
+  margin: 2rem;
+   text-transform: capitalize;
+}
+
+.links{
+  text-align: center;
+  max-width: 100%;
+  height: auto;
+}
+.links li{
+  display: block;
+  list-style-type: none;
+  padding-bottom: 0.5rem; 
+ }
+
+.links li a{
+  text-decoration: none;
+}
+.links li a:link{
+  color: red;
+}
+
+
+/* visited link */
+.links li a:visited {
+    color: green;
+}
+
+/* mouse over link */
+.links li a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+.links li a:active {
+    color: blue;
+}
+
+#resources li{
+  padding-bottom: 1rem;
+}
+#resources a{
+   text-decoration: none;
+   color: white;
+}
+
+.back{
+  text-transform: capitalize;
+}
+#resources a:hover{
+  color: #dee5a3;
+}
+.menu nav {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+.menu a {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #3e3d3d;
+    color: #ffffff;
+    display: block;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    text-decoration: none;
+}
+.menu a:hover {
+    background-color: #6e6c6c;
+}
+.aside {
+    background-color: #3e3d3d;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.aside h2{
+  margin-top: 7%;
+  margin-bottom: 7%;
+}
+.aside fieldset{
+  padding: 3%;
+  margin: 3%;
+  max-width: 100%;
+}
+ input{
+  margin-bottom: 10%;
+}
+.aside > ul{
+  list-style-type: none;
+  width: 100%;
+  margin-left: 0;
+  margin-top: 0;
+  
+}
+.aside > ul > li {
+  margin-bottom: 3%;
+ 
+}
+.aside a{
+  text-decoration: none;
+  color: white;
+}
+.aside a:hover{
+  color: #dee5a3;
+}
+#footer {
+    background-color: #1b1a1a;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.col-6{
+    
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    margin: auto;
+    color: white;
+    text-align: center;
+    
+}
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+.col-6{
+  text-aligh: center;
+}
+.col-6 ul li{
+  list-style-type: none;
+}
+@media only screen and (max-width: 768px) {
+    /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+/* For Desktop: */
+  @media only screen and (min-width: 768px) {
+   .links li , nav a{
+     display: inline-block;
+     padding-left: 1rem;
+     }
+   .aside , #header{
+        text-align: left;
+    }
+    .aside{
+      padding: 5%;
+    }
+    form {
+      width: 100%;
+    }
+    input{
+      width: 80%;
+    }
+     .col-6 ul li {
+      list-style-type: circle;
+    }
+    
+    .col-6 section{
+     text-align: left;
+    }
+     .col-6 .title{
+     text-align: left; 
+    }
+ }
